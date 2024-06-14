@@ -26,6 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install
-    - run: npm start
-    - run: npm test
+        - name: Instal node package
+          - run: npm install
+        - name: start app
+          - run: npm start
+        - name: start test
+          - run: npm test
